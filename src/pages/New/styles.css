@@ -1,0 +1,10 @@
+.new-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+#description {
+    height: 100px;
+}
