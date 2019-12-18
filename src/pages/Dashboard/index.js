@@ -50,7 +50,7 @@ export default function Dashboard({ history }) {
         <h2>Minhas Tarefas</h2>
         <button type="button" onClick={newTask} >
           <div className="button-icon">
-            <FaPlus color="#fff"/>
+            <FaPlus color="#ffffff"/>
           </div>
           Nova tarefa
         </button>
