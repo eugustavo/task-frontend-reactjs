@@ -18,7 +18,7 @@ export default function Dashboard({ history }) {
     }
     loadTask();
     localStorage.setItem('task', '');
-  }, []);
+  }, [task]);
 
   async function newTask(){
     history.push('/new');
@@ -29,9 +29,6 @@ export default function Dashboard({ history }) {
 
     await api.delete('/task', {headers: {user_id, task_id}});
     toast.success('Tarefa concluída!');
-    setTimeout(() => {
-      window.location.reload();
-    }, 1500);
   }
 
   async function editTask(task_id){
@@ -44,18 +41,19 @@ export default function Dashboard({ history }) {
 
     const response = await api.delete('/task', {headers: {user_id, task_id}});
     toast.error(response.data.message);
-    setTimeout(() => {
-      window.location.reload();
-    }, 1500);
-    
   }
 
   return (
     <>
-      <ToastContainer autoClose={1500} />
+      <ToastContainer />
       <header className="header">
         <h2>Minhas Tarefas</h2>
-        <button type="button" onClick={newTask} ><FaPlus color="#fff"/> Nova tarefa</button>
+        <button type="button" onClick={newTask} >
+          <div className="button-icon">
+            <FaPlus color="#fff"/>
+          </div>
+          Nova tarefa
+        </button>
       </header>
       <div className="task-list">
         <ul>
