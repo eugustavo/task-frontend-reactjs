@@ -8444,6 +8444,11 @@ react-error-overlay@^6.0.4:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.4.tgz#0d165d6d27488e660bc08e57bdabaad741366f7a"
   integrity sha512-ueZzLmHltszTshDMwyfELDq8zOA803wQ1ZuzCccXa1m57k1PxSHfflPD5W9YIiTXLs0JTLzoj6o1LuM5N6zzNA==
 
+react-hooks-use-modal@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-hooks-use-modal/-/react-hooks-use-modal-1.0.5.tgz#09925e3f9fd873f62b32af66b1ed2761c3d4e126"
+  integrity sha512-bAdTj32os102q2EOWu8LsEEyrfJ1WZ4qPISZOGfySw8U544m7AX85819c+VBrx12b0jNSIsDY9iEDs9JMTGAKw==
+
 react-icons@^3.8.0:
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-3.8.0.tgz#229de5904809696c9f46932bd9b6126b2522866e"
