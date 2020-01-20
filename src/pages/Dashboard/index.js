@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import useModal from 'react-hooks-use-modal';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import api from '../../services/api';
-import { FaPlus, FaCheck, FaEdit, FaTrash } from 'react-icons/fa'
 
+import { FaPlus, FaCheck, FaEdit, FaTrash } from 'react-icons/fa'
 import './styles.css';
 
 export default function Dashboard({ history }) {
-  // eslint-disable-next-line
-  const [Modal, open, close] = useModal('root');
   const [task, setTask] = useState([]);
 
   useEffect(() => {
@@ -64,7 +61,9 @@ export default function Dashboard({ history }) {
           {task.map(task => (
             <li className="task" key={task._id}>
               <strong>{task.title}</strong>
-              <span>{task.description}</span>
+              <div className="task-description">
+                <span>{task.description}</span>
+              </div>
               <div className="task-icons">
                 <FaCheck className="check-icon" onClick={() => checkTask(task._id)} />
                 <FaEdit className="edit-icon" onClick={() => editTask(task._id)} />

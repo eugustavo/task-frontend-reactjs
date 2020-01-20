@@ -48,12 +48,24 @@
     border-radius: 6px;
 }
 
-.task span {
+.task-description {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    text-overflow: clip;
+}
+
+.task-description span {
+    display: block;
+    max-width: 100%;
     flex: 1; 
     font-size: 12px;
     color: #4e4e4e;
     margin: 5px 0;
+
 }
+
 
 .task-icons {
     display: flex;
